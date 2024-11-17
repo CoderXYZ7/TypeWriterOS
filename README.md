@@ -1,76 +1,102 @@
-# TypeWriterOS: Minimalist Writing-Focused Linux Distro
+---
+# TypeWriterOS
 
-**TypeWriterOS** is a lightweight, distraction-free Linux distribution designed for writers. It turns your computer into a digital typewriter, offering a focused environment to write without the clutter of a desktop environment.
+**TypeWriterOS** is a minimalist Linux distribution designed for writers. It transforms your computer into a distraction-free, digital typewriter, offering a focused environment to write and manage text files effortlessly.
 
 ---
 
-## Key Features
-- **Instant Boot to Writing**: Automatically logs in and opens the text editor where you left off.
-- **File Slot System**: Easily switch between 12 text files using function keys (F1–F12).
-- **Simple File Export**: Transfer files to USB drives with a single keystroke (F12).
-- **Minimalist Environment**: No desktop environment or unnecessary distractions.
+## Features
 
----
-
-## How It Works
-1. **Boot**: Power on the device, and the text editor opens directly.
-2. **Write**: Use function keys to switch between files (F1–F12).
-3. **Export**: Insert a USB drive and press F12 to copy all files to the drive.
-4. **Shutdown**: Turn off the device when done—no fuss, no distractions.
+- **Lightweight Desktop Environment**: Powered by LXQt, optimized for speed and simplicity.
+- **Instant Boot to Writing**: Boots directly into a full-screen text editor, ready for work.
+- **File Slot System**: Quickly switch between 12 pre-configured text files using function keys (F1–F12).
+- **Simple File Export**: Press F12 to copy all text files to a connected USB drive.
+- **Minimalist Environment**: Stripped-down interface with no unnecessary distractions.
+- **Autosave & Backup**: Files are automatically saved with optional version control.
 
 ---
 
 ## System Requirements
-- CPU: x86_64 or ARM processor
-- RAM: 512MB (1GB recommended)
-- Storage: 2GB available disk space
-- Optional: USB drive for file export
+
+- **Processor**: x86_64 or ARM-based CPU
+- **Memory**: 512MB RAM (1GB recommended)
+- **Storage**: 2GB of available disk space
+- **Optional**: USB drive for file export
 
 ---
 
-## Installation Instructions
+## Installation
 
-### 1. Install TypeWriterOS
-1. Download the **TypeWriterOS ISO** (link coming soon).
+### Prerequisites
+- A USB flash drive (minimum 4GB) for the installer.
+- A target device compatible with the system requirements.
+
+### Steps
+1. Clone or download the repository:
+   ```bash
+   git clone https://github.com/YourUsername/TypeWriterOS.git
+   cd TypeWriterOS
+   ```
 2. Flash the ISO to a USB drive:
-   - On Linux:  
+   - On Linux:
      ```bash
      sudo dd if=TypeWriterOS.iso of=/dev/sdX bs=4M status=progress
      sync
      ```
    - On Windows: Use [Rufus](https://rufus.ie/).
-3. Boot from the USB drive and follow the installation instructions.
+3. Boot the target device from the USB and follow the on-screen instructions.
+4. After installation, run the setup script:
+   ```bash
+   sudo ./installer.sh
+   ```
 
 ---
 
-## Usage Guide
+## Usage
 
-### Boot and Write
-- The system automatically logs in and opens the text editor.
-- Begin writing in the last file you worked on.
-
-### File Slot System
-- Use function keys **F1–F12** to open 12 different files:
-  - F1 = Slot 1 (file1.txt)
-  - F2 = Slot 2 (file2.txt)
+### Writing Workflow
+- **Boot**: Power on the device, and FeatherPad opens automatically.
+- **File Switching**: Use function keys (F1–F12) to open 12 pre-configured files:
+  - F1 = file1.txt
+  - F2 = file2.txt
   - ...
-  - F12 = Slot 12 (file12.txt)
+  - F11 = file11.txt
+- **Export Files**:
+  1. Insert a USB drive.
+  2. Press **F12** to copy all files to the drive.
+  3. Remove the USB drive after export is complete.
+- **Shutdown**: Turn off the system once your work is done.
 
-### Export Files
-1. Insert a USB drive.
-2. Press **F12** to copy all files (`file1.txt` to `file12.txt`) to the USB drive.
-3. Remove the USB after the export completes.
+---
+
+## Development and Customization
+
+### File Slot Customization
+The file paths for F1–F12 are configured in `.xbindkeysrc`. To modify:
+```bash
+nano /home/writer/.xbindkeysrc
+```
+
+### Adding Features
+- Modify the `installer.sh` script to add or adjust features.
+- Include additional applications by updating the package installation list.
 
 ---
 
 ## Contributing
-Want to contribute or improve TypeWriterOS? Fork the project repository (link coming soon) or share your feedback.
+Contributions are welcome! Fork the repository and submit a pull request with your enhancements or fixes.
 
 ---
 
 ## License
-TypeWriterOS is released under the MIT License. Feel free to modify and share it as you like.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## Screenshots
+*(Screenshots coming soon!)*
 
 ---
 
 Enjoy distraction-free writing with **TypeWriterOS**!
+```
