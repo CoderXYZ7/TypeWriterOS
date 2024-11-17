@@ -1,4 +1,4 @@
----
+
 # TypeWriterOS
 
 **TypeWriterOS** is a minimalist Linux distribution designed for writers. It transforms your computer into a distraction-free, digital typewriter, offering a focused environment to write and manage text files effortlessly.
