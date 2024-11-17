@@ -1,7 +1,7 @@
 
 # TypeWriterOS
 
-**TypeWriterOS** is a minimalist Linux distribution designed for writers. It transforms your computer into a distraction-free, digital typewriter, offering a focused environment to write and manage text files effortlessly.
+**TypeWriterOS** is a minimalist Linux personalization designed for writers. It transforms your computer into a distraction-free, digital typewriter, offering a focused environment to write and manage text files effortlessly.
 
 ---
 
@@ -18,18 +18,15 @@
 
 ## System Requirements
 
-- **Processor**: x86_64 or ARM-based CPU
+- **OS**: An already installed Debian-based distro
+- **Processor**: x86_64 CPU
 - **Memory**: 512MB RAM (1GB recommended)
-- **Storage**: 2GB of available disk space
+- **Storage**: 10GB of available disk space
 - **Optional**: USB drive for file export
 
 ---
 
 ## Installation
-
-### Prerequisites
-- A USB flash drive (minimum 4GB) for the installer.
-- A target device compatible with the system requirements.
 
 ### Steps
 1. Clone or download the repository:
@@ -37,15 +34,7 @@
    git clone https://github.com/YourUsername/TypeWriterOS.git
    cd TypeWriterOS
    ```
-2. Flash the ISO to a USB drive:
-   - On Linux:
-     ```bash
-     sudo dd if=TypeWriterOS.iso of=/dev/sdX bs=4M status=progress
-     sync
-     ```
-   - On Windows: Use [Rufus](https://rufus.ie/).
-3. Boot the target device from the USB and follow the on-screen instructions.
-4. After installation, run the setup script:
+2. Run the setup script:
    ```bash
    sudo ./installer.sh
    ```
@@ -56,7 +45,7 @@
 
 ### Writing Workflow
 - **Boot**: Power on the device, and FeatherPad opens automatically.
-- **File Switching**: Use function keys (F1–F12) to open 12 pre-configured files:
+- **File Switching**: Use function keys (F1–F11) to open 11 pre-configured files:
   - F1 = file1.txt
   - F2 = file2.txt
   - ...
